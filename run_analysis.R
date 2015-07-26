@@ -14,8 +14,8 @@ subject-data<-rbind(subject-train, subjecttest)
 #2. Extracts only the measurements on the mean and standard deviation for each measurement:
 feats<-read.table("features.txt")
 m&sd<-grep("-(mean|std)\\(\\)", feats[, 2])
-x_data <- x_data[, m&sd]
-names(x_data)<-feats[m&sd, 2]
+xdata<-xdata[, m&sd]
+names(xdata)<-feats[m&sd, 2]
 
 #3. Uses descriptive activity names to name the activities in the data set:
 activity-labels<-read.table("activity_labels.txt")
